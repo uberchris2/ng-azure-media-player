@@ -1,21 +1,68 @@
-# NgAmp
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.11.
+# Angular Azure Media Player
+[![NPM](https://img.shields.io/npm/v/ng-amp.svg)](https://www.npmjs.com/package/ng-amp)
+An Azure Media Player component for Angular.
+## Overview
+ Azure Media Player (AMP) is a web video player built to playback media content from Azure Media Services on a wide variety of browsers and devices. This project provides an angular component that wraps the raw js/css player for basic use cases. 
 
-## Code scaffolding
+To use this component, you must first upload a video to media services and get a streaming endpoint.
 
-Run `ng generate component component-name --project ng-amp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-amp`.
-> Note: Don't forget to add `--project ng-amp` or else it will be added to the default project in your `angular.json` file. 
+[Azure Media Player Docs](http://amp.azure.net/libs/amp/latest/docs/index.html)
+[Azure Media Player Demo](https://ampdemo.azureedge.net/)
+[Azure Media Services Docs](https://docs.microsoft.com/en-us/azure/media-services/)
+## Usage
+### Step 1: Install the `ng-amp` package
+```bash
+npm install --save ng-amp
+```
+### Step 2: Import the NgAmpModule
+```ts
+import { NgAmpModule } from  'ng-amp'
 
-## Build
-
-Run `ng build ng-amp` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ng-amp`, go to the dist folder `cd dist/ng-amp` and run `npm publish`.
-
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  declarations: [AppComponent],
+  imports: [NgAmpModule],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+### Step 3: Use the module
+```html
+<ng-amp
+  src="//amssamples.streaming.mediaservices.windows.net/3b970ae0-39d5-44bd-b3a3-3136143d6435/AzureMediaServicesPromo.ism/manifest"
+  controls="true"
+  autoplay="true"
+  width="640"
+  height="360"
+  fluid="false"
+  >
+</ng-amp>
+```
+## Configuration
+This package exposes the commonly-used configuration from the media player. You can find detailed explanations for each option on the [Azure documentation](https://amp.azure.net/libs/amp/latest/docs/index.html#options).
+| Input  | Type | Default | Required | Description |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| src | string  | none | yes | URL to the manifest for the asset |
+| controls | boolean  | `false` | no | Whether or not the player has controls that the user can interact with |
+| autoplay | boolean  | `false` | no | Controls if the video will start playing as soon as page is loaded |
+| poster | string  | none | no | The image that displays before the video begins playing |
+| width | number | none | no | Display width of the video |
+| height | number | none | no | Display height of the video |
+| fluid | boolean | `false` | no | Controls if video element will take full width of the parent container |
+## Contributing
+### Build the library
+```bash
+ng build ng-amp
+```
+This step must be repeated every time a change is made to the library.
+### Build and serve the host project
+```bash
+ng serve
+```
+The host project should now be hosted at `http://localhost:4200`.
+### Publish the library
+```bash
+npm run package
+cd dist/ng-amp/
+npm publish
+```
