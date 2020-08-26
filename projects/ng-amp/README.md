@@ -15,9 +15,6 @@ Run `ng build ng-amp` to build the project. The build artifacts will be stored i
 
 After building your library with `ng build ng-amp`, go to the dist folder `cd dist/ng-amp` and run `npm publish`.
 
-## Running unit tests
-
-Run `ng test ng-amp` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Further help
 
