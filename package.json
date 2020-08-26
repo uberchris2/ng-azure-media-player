@@ -5,9 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build-lib": "ng build --prod ng-amp",
+    "npm-pack": "cd dist/ng-amp && npm pack",
+    "package": "npm run build-lib && npm run npm-pack"
   },
   "private": true,
   "dependencies": {
