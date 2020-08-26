@@ -119,6 +119,46 @@
           }
         }
       }
+    },
+    "ng-amp": {
+      "projectType": "library",
+      "root": "projects/ng-amp",
+      "sourceRoot": "projects/ng-amp/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-amp/tsconfig.lib.json",
+            "project": "projects/ng-amp/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-amp/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-amp/src/test.ts",
+            "tsConfig": "projects/ng-amp/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-amp/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-amp/tsconfig.lib.json",
+              "projects/ng-amp/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ng-azure-media-player"
 }
