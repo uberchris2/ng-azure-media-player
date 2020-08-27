@@ -1,7 +1,8 @@
-
 # Angular Azure Media Player
 [![NPM](https://img.shields.io/npm/v/ng-amp.svg)](https://www.npmjs.com/package/ng-amp)
+
 An Azure Media Player component for Angular.
+
 ## Overview
  Azure Media Player (AMP) is a web video player built to playback media content from Azure Media Services on a wide variety of browsers and devices. This project provides an angular component that wraps the raw js/css player for basic use cases. 
 
@@ -10,6 +11,7 @@ To use this component, you must first upload a video to media services and get a
 [Azure Media Player Docs](http://amp.azure.net/libs/amp/latest/docs/index.html)
 [Azure Media Player Demo](https://ampdemo.azureedge.net/)
 [Azure Media Services Docs](https://docs.microsoft.com/en-us/azure/media-services/)
+
 ## Usage
 ### Step 1: Install the `ng-amp` package
 ```bash
@@ -38,6 +40,7 @@ export class AppModule {}
   >
 </ng-amp>
 ```
+
 ## Configuration
 This package exposes the commonly-used configuration from the media player. You can find detailed explanations for each option on the [Azure documentation](https://amp.azure.net/libs/amp/latest/docs/index.html#options).
 | Input  | Type | Default | Required | Description |
@@ -49,6 +52,7 @@ This package exposes the commonly-used configuration from the media player. You 
 | width | number | none | no | Display width of the video |
 | height | number | none | no | Display height of the video |
 | fluid | boolean | `false` | no | Controls if video element will take full width of the parent container |
+
 ## Contributing
 ### Build the library
 ```bash
