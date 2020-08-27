@@ -1,6 +1,6 @@
 {
   "name": "ng-amp",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "peerDependencies": {
     "@angular/common": "^10.0.11",
     "@angular/core": "^10.0.11"
@@ -10,6 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/uberchris2/ng-azure-media-player.git"
-  }
+    "url": "https://github.com/uberchris2/ng-azure-media-player"
+  },
+  "homepage": "https://github.com/uberchris2/ng-azure-media-player/tree/master/projects/ng-amp"
 }
