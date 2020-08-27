@@ -7,7 +7,7 @@ An Azure Media Player component for Angular.
 
 ## Overview
 
-[Azure Media Player (AMP)](http://amp.azure.net/libs/amp/latest/docs/index.html) is a web video player built to playback media content from [Azure Media Services](https:/docs.microsoft.com/en-us/azure/media-services/) on a wide variety of browsers and devices. This project provides an angular component that wraps the raw js/css player fo rbasic use cases.
+[Azure Media Player (AMP)](http://amp.azure.net/libs/amp/latest/docs/index.html) is a web video player built to playback media content from [Azure Media Services](https:/docs.microsoft.com/en-us/azure/media-services/) on a wide variety of browsers and devices. This project provides an angular component that wraps the raw js/css player for basic use cases.
 
 To use this component, you must first [upload a video to media services, encode it, and get a streaming endpoint](https://docs.microsoft.com/en-us/azure/media-serviceslatest/manage-assets-quickstart). For more details, take a look at the
 
