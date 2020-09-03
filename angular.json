@@ -150,8 +150,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-amp/tsconfig.lib.json",
-              "projects/ng-amp/tsconfig.spec.json"
+              "projects/ng-amp/tsconfig.lib.json"
             ],
             "exclude": [
               "**/node_modules/**"

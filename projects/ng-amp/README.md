@@ -36,11 +36,11 @@ export class AppModule {}
 ```html
 <ng-amp
   src="//amssamples.streaming.mediaservices.windows.net/3b970ae0-39d5-44bd-b3a3-3136143d6435/AzureMediaServicesPromo.ism/manifest"
-  controls="true"
-  autoplay="true"
+  [controls]="true"
+  [autoplay]="true"
   width="640"
   height="360"
-  fluid="false"
+  [fluid]="false"
   >
 </ng-amp>
 ```
@@ -51,12 +51,12 @@ This package exposes the commonly-used configuration from the media player. You 
 | Input  | Type | Default | Required | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | src | string  | none | yes | URL to the manifest for the asset |
-| controls | boolean  | `false` | no | Whether or not the player has controls that the user can interact with |
-| autoplay | boolean  | `false` | no | Controls if the video will start playing as soon as page is loaded |
+| [controls] | boolean  | true | no | Whether or not the player has controls that the user can interact with |
+| [autoplay] | boolean  | false | no | Controls if the video will start playing as soon as page is loaded |
 | poster | string  | none | no | The image that displays before the video begins playing |
 | width | number | none | no | Display width of the video |
 | height | number | none | no | Display height of the video |
-| fluid | boolean | `false` | no | Controls if video element will take full width of the parent container |
+| [fluid] | boolean | false | no | Controls if video element will take full width of the parent container |
 
 ## Contributing
 

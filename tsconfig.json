@@ -15,9 +15,6 @@
     },
     {
       "path": "./projects/ng-amp/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/ng-amp/tsconfig.spec.json"
     }
 ]
 }
